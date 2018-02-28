@@ -1,7 +1,7 @@
 from django.forms import ModelForm
-from .models import User
+from .models import User_custom
 
 class UserForm(ModelForm):
     class Meta:
-        model = User
+        model = User_custom
         fields = ['pseudo', 'mdp']

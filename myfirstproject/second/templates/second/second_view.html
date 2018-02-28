@@ -1,5 +1,10 @@
 <html>
-    <p>Pseudo : {{ user.pseudo }}</p>
-    <p>Mot de passe : {{ user.mdp }}</p>
-    {{form}}
+    <form method="post" action="">
+        {% csrf_token %}
+        {{form}}
+        <input type="submit">
+    </form>
+    {% for user in users %}
+        <p>{{user.pseudo}}</p>
+    {% endfor %}
 </html>
